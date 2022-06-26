@@ -1,0 +1,68 @@
+{
+  "folderClassifications": [
+    {
+      "classificationName": "Pictures",
+      "fileExtensions": [
+        ".jpg",
+        ".jpeg",
+        ".gif",
+        ".png"
+      ],
+      "targetPath": "Images"
+    },
+    {
+      "classificationName": "Videos",
+      "fileExtensions": [
+        ".mp4",
+        ".avi",
+        ".mkv"
+      ]
+    },
+    {
+      "classificationName": "Audio",
+      "fileExtensions": [
+        "mp3"
+      ]
+    },
+    {
+      "classificationName": "Setup",
+      "fileExtensions": [
+        ".exe",
+        ".msi"
+      ]
+    },
+    {
+      "classificationName": "Documents",
+      "fileExtensions": [
+        ".docx",
+        ".xlxs",
+        ".doc",
+        ".txt",
+        ".json"
+      ]
+    },
+    {
+      "classificationName": "Archives",
+      "fileExtensions": [
+        ".zip",
+        ".7z",
+        ".rar",
+        ".tar.gz"
+      ]
+    },
+    {
+      "classificationName": "Subtitles",
+      "fileExtensions": [
+        ".srt"
+      ],
+      "targetPath": "Documents/Subtitles"
+    },
+    {
+      "classificationName": "Torrents",
+      "fileExtensions": [
+        ".torrent"
+      ],
+      "targetPath": "Documents/Torrents"
+    }
+  ]
+}
