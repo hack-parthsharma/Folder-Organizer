@@ -1,0 +1,83 @@
+﻿<Page x:Class="Folder_Organizer.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Folder_Organizer"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="white"
+      Title="HomePage">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button x:Name="settingsButton" Width="50" BorderBrush="Transparent" HorizontalAlignment="Right" Margin="0 0 20 0" Grid.Row="0" Height="20" Content="Settings" Click="settingsButton_Click" ></Button>
+
+        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Choose the folder you want to organize" FontSize="30" FontFamily="Roboto"/>
+
+        <Grid Grid.Row="2" Margin="50 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Grid.Column="0" BorderBrush="#FFEAEAEA" BorderThickness="1" HorizontalAlignment="Stretch" Height="54" VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" Margin="20 0" x:Name="selectedFolderPath" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="-0.304,-1.267" Width="608" Height="21" Grid.ColumnSpan="5" FontSize="14" Background="White"/>
+            <Button Grid.Row="0" Grid.Column="0"  Margin="0 0 0 0" VerticalAlignment="Center" x:Name="selectFolder" Content="Select Folder" HorizontalAlignment="Right" Width="125" Click="selectFolder_Click" Height="54" BorderBrush="White" Background="#FFEAEAEA" Foreground="#FF171717" FontSize="16" Cursor="Hand" >
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="LightBlue" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#FFE2E2E2" TargetName="Border" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
+
+        <Button Grid.Row="3" HorizontalContentAlignment="Center" x:Name="organizeFolder" Content="Organize Folder" HorizontalAlignment="Center" VerticalAlignment="Center" Width="310" Click="organizeFolder_Click" Height="60" BorderBrush="White" Background="#FF3077F0" Foreground="White" FontSize="20" Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF5992F4" TargetName="Border" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="statusMessage" Content="" FontSize="20" />
+    </Grid>
+</Page>

@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Folder_Organizer.Controls.ClassificationEditControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Folder_Organizer.Controls"
+             xmlns:viewmodel="clr-namespace:Folder_Organizer.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="White">
+    <StackPanel Margin="10">
+        <Label Content="ClassificationName"></Label>
+        <TextBox x:Name="nameInput" Text="{Binding ViewModel.ClassificationName}" VerticalContentAlignment="Center" Height="30" FontSize="16"></TextBox>
+        <Label Content="Extentions"></Label>
+        <TextBox x:Name="extentionsInput" Text="{Binding ViewModel.Extensions}" VerticalContentAlignment="Center" Height="30" FontSize="16"></TextBox>
+        <Label Content="Target Path"></Label>
+        <TextBox x:Name="targetPathInput" Text="{Binding ViewModel.TargetPath}"  VerticalContentAlignment="Center" Height="30" FontSize="16"></TextBox>
+        <Button Content="Save" Margin="0 10 0 0" Width="200" HorizontalAlignment="Left" Click="Button_Click" Height="40" BorderBrush="White" Background="#FF3077F0" Foreground="White" FontSize="20" Cursor="Hand">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF5992F4" TargetName="Border" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+    </StackPanel>
+</UserControl>
