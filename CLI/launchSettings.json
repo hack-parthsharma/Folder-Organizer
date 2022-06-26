@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "FolderOrganizer.Cli": {
+      "commandName": "Project"
+    }
+  }
+}
